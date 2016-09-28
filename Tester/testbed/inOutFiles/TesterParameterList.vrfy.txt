@@ -1,0 +1,53 @@
+Scrieti o aplicatie c++ care foloseste ParameterList. Aceasta va avea 2 moduri de operare, in functie de care
+se vor executa diverse operatii:
+
+** WRITE ** 
+Modul de operare `write` va permite scrierea datelor intr-un fisier. Parameterii acestei operatii sunt:
+
+
+write <fisier_intrare> <fisier_iesire> <id> <tip> <continut>
+Unde:
+ 
+fisier_intrare -- reprezinta un fisier ce contine continutul unui ParameterList radacina. Acest fisier va fi 
+citit la initializarea aplicatiei si se va popula ParameterList-ul intern cu datele din el. Daca fisierul nu 
+exista (sau daca se va da un string gol), se considera ca initial ParameterList este gol
+fisier_iesire -- fisierul unde va fi scris buffer-ul rezultat din parameterList-ul radacina. Daca exista 
+deja acest fisier, se va suprascrie continutul sau. id - id-ul elementului ce trebuie adaugat tip - tipul 
+elementului ce va fi adaugat. Valori posibile sunt: 	
+	- Int 
+	- String
+	- ParameterList 
+	- Buffer
+	
+In cazul in care <tip> este int sau string, parametrul <continut> va reprezenta continutul ce trebuie scris 
+in ParameterList
+In cazul in care <tip> este ParameterList <continut> reprezinta numele unui fisier care va trebui incarcat 
+intr-un ParameterList pe care il adaugati la parameterList-ul radacina
+In cazul in care <tip> este Buffer <continut> reprezinta numele unui fisier care va fi incarcat intr-un 
+buffer pe care il adaugati la ParameterList-ul radacina.
+
+** READ ** 
+Modul de operare `read` va permite citirea informatiilor din fisier
+Parametrii acestei operatii sunt:
+read <fisier_intrare> <id> <tip> <fisier_iesire>
+Unde
+fisier_intrare - reprezinta un fisier ce va trebui incarcat iar continutul sau transformat intr-un 
+ParameterList: id - id-ul elementului ce trebuie citit, tip - tipul elementului ce trebuie citit. 
+Valori posibile sunt:
+	- Int
+	- String
+	- ParameterList
+	- Buffer
+
+In cazul in care <tip> este int sau string rezultatul se va scrie la stdout. 
+Daca <tip> este ParameterList continutul se va citi folosind functia de citire ParameterList si se va scrie 
+in fisierul de iesire
+Daca <tip> este Buffer continutul se va citi folosind functia de citire Buffer iar continutul se va scrie 
+in fisierul de iesire.
+	
+
+Scrieti o aplicatie python care folosete programul c++ pentru testare corectitudinii operatiilor facute de 
+ParameterList. Aplicatia va citi mai multe operatii dintr-un json de configurare si va executa operatiile 
+specificate. Operatiile pot fi de 2 tipuri: operatii de tip `write` (care vor folosi aplicatia c++ pentru 
+a scrie intr-un fisier). Operatiile `read` vor citi informatiile folosind ParameterList si (in caz ca se 
+cere) vor compara continutul cu referinta. Un exemplu de json de configurare gasiti atasat. 

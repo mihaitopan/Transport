@@ -1,0 +1,3 @@
+Tester\testbed\inOutFiles\BinaryScanPlugin.vcxproj Tester\testbed\inOutFiles\BinaryScanPlugin.out.vcxproj
+Tester\testbed\inOutFiles\Exercitii.txt Tester\testbed\inOutFiles\Exercitii.out.txt
+Tester\testbed\inOutFiles\Exercitii2.txt Tester\testbed\inOutFiles\Exercitii2.out.txt

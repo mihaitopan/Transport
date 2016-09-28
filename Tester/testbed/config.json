@@ -1,0 +1,45 @@
+[
+  {
+    "cmdFile": "configA.txt",
+    "assertEq": 
+    {
+      "1.exercitii.out.txt": "1.exercitii.vrfy.txt",
+      "2.exercitii.out.txt": "2.exercitii.vrfy.txt"
+    }
+  },
+  {
+    "cmdFile": "configEi.txt",
+    "assertEq": 
+    {
+      "BinaryScanPlugin.vcxproj": "BinaryScanPlugin.out.vcxproj",
+      "Exercitii.txt": "Exercitii.out.txt",
+      "Exercitii2.txt": "Exercitii2.out.txt"
+    }
+  },
+  {
+    "cmdFile": "configJay.txt",
+    "assertEq": 
+    {
+      "Exercitii3.txt": "Exercitii3.out.txt",
+      "Exercitii5.txt": "Exercitii5.out.txt",
+      "Exercitii7.txt": "Exercitii7.out.txt"
+    }
+  },
+  {
+    "cmdFile": "configMe.txt",
+    "assertEq": 
+    {
+      "Exercitii8.txt": "Exercitii8.out.txt",
+      "TesterParameterList.txt": "TesterParameterList.out.txt"
+    }
+  },
+  {
+    "cmdFile": "configNey.txt",
+    "assertEq": 
+    {
+      "LEGENDA.txt": "LEGENDA.out.txt",
+      "TesterParameterList.txt": "TesterParameterList.out.txt",
+      "TextScanPlugin.vcxproj.user":  "TextScanPlugin.vcxproj.out.user"
+    }
+  }
+]
