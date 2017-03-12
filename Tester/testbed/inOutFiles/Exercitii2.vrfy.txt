@@ -1,0 +1,18 @@
+Toate operatiile se vor face folosind api-ul windows daca nu este specificat alftel.
+
+1. Se sa scrie o aplicatie care apendeaza data (unix time) intr-un fisier pe o linie. Rulati mai 
+multe instante ale aplicatiei. 
+Sincronizati accesul la fisier folosind mecanisme de sincronizare interprocess astfel incat o 
+singura instanta a aplicatiei sa scrie fisierul la un moment dat.
+
+2. Sa se creeze o clasa care administreaza un thread pool. Definitia clasei pe care trebuie sa o implementati s
+e gaseste in thread_pool.h (Hint: folositi CreateSemaphore)
+
+3. Creati o aplicatie care citeste un informatii dintr-un fisier si cripteaza fisierul folosind algoritmul xor. 
+Folositi un thread pool (numarul de thread-uri va fi primit ca parametru in linia de comanda) pentru criptarea datelor. 
+Scrieti datele intr-un fisier de iesire. Exemplu de rulare:
+
+- pe thread-ul main se vor trimite date la criptare (de dimensiune 4k) -- in paralel pot fi n criptari la un moment dat
+- asteptati criptarea datelor (hint: WaitForMultipleObjects)
+- scrieti datele in fisier
+- repetati

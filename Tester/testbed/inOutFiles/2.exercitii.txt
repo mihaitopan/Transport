@@ -1,0 +1,63 @@
+4. Sa se scrie o clasa Vector generica (template) prin care se poate gestiona un vector generic de date. Clasa trebuie sa suporte urmatoarele operatii:
+- add_back(element) - adauga un element la coada vectorului
+- add_front(element) - adauga un element la fata vectorului
+- get_back() - returneaza ultimul element al vectorului
+- get_front() - returneaza primul element al vectorului
+- size() - returneaza numarul de elemente 
+- get(int pos) - returneaza prin referinta elementul de la pozitia pos
+- erase (int pos) - sterge elementul de la pozitia pos
+In toate cazurile de eroare se va arunca o exceptie de tip std::exception("mesaj de exceptie"). Clasa trebuie definita si implementata in interiorul namespace-ului cj
+
+Sa se scrie o clasa Iterator (in interiorul clasei Vector) prin care putem itera prin elementele vectorului. Clasa va contine urmatoarele functii:
+- un constructor care primeste ca parametru un vector si isi initializeaza structura interna
+- o functie Get() - returneaza elementul de la pozitia curenta
+- o functie Valid() - intoarce daca este valid (s-a ajuns la capat sau nu)
+- o functie Next() - avanseaza iteratorul pana la urmatoarea pozitie
+
+5. Sa se scrie o clasa generica List (template) care gestioneaza o lista generica de date. Lista trebuie sa suporte urmatoarele operatii:
+- add_front (element) - adauga un element in fata listei
+- add_back (element) - adauga un element in spatele listei
+- get_front() -- returneaza primul element al listei
+- get_back() -- returneaza ultimul element al listei
+- size() - returneaza numarul de elemente 
+- get(int pos) - returneaza prin referinta elementul de la pozitia pos
+- erase (int pos) - sterge elementul de la pozitia pos
+
+In toate cazurile de eroare se va arunca o exceptie de tip std::exception("mesaj de exceptie"). Clasa trebuie definita si implementata in interiorul namespace-ului cj
+
+Sa se scrie o clasa Iterator (in interiorul clasei List) prin care putem itera prin elementele listei. Clasa va contine urmatoarele functii:
+
+- un constructor care primeste ca parametru o lista si isi initializeaza structura interna
+- o functie Get() - returneaza elementul (prin referinta) de la pozitia curenta
+- o functie Valid() - intoarce daca este valid (s-a ajuns la capat sau nu)
+- o functie Next() - avanseaza iteratorul pana la urmatoarea pozitie
+
+Sa se scrie un program care primeste ca parametri
+-operations <fisier_intrare> <list/vector> si executa operatiile din fisierul de intrare folosind lista sau vectorul (cu elemente de tip int) definite mai sus.
+
+Operatiile din fisierul de intrare sunt:
+- add front 12 -> adauga elementul 12 in fata container-ului
+- add back 11 -> adauga elementul 11 in spatele
+- list -> listeaza container-ului
+- list pos -> listeaza elementul de la pozitia pos
+- list_back -> listeaza ultimul element
+- list_front -> listeaza primul element
+- size -> dimensiunea container-uli
+- erase pos -> sterge elementul de la pozitia pos
+
+Exemplu de rulare:
+sd.exe operations.txt list
+
+unde operations.txt contine:
+add front 1
+add front 2
+list 
+list 0
+size
+erase 0
+list
+erase 12
+
+Tot codul trebuie scris in c++ cu constructii specifice c++ 
+
+Sa se scrie un tester in python care verifica corectitudinea operatiilor facute de catre cele 2 structuri de date. Refolositi template-ul (template.html) de la exercitiul cu sistemul de fisiere virtual

@@ -1,0 +1,17 @@
+TYPE 	NAME 			LOCATION
+
+C++
+		1.Exercitii		\unique&share ptr\
+		2.Exercitii		\data strunctures\
+		Scanner AV		\scanner av\Scanner AV (1)\
+	
+Win API
+		Exercitii		\command app\
+		Exercitii2		\thread pool\
+		Exercitii3		\libraries\types\
+		Exercitii4		\scanner av\ScannerAv (2)\
+		Exercitii5		\client-server\
+		Exercitii6		\scanner av\AvScanner (3)\
+		Exercitii7		\parameter list\
+		Exercitii8		\libraries\transport\ + \scanner av\AvScanner (3)
+		Exercitii9		

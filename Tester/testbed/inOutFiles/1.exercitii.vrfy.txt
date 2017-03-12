@@ -1,0 +1,40 @@
+1. Sa se scrie o clasa Punct cu 2 membri de tip int (x, y) care are:
+	- un constructor ce initializieaza cei 2 membri la 0
+	- un constructor care primeste ca parametru 2 variabile si initializeaza x si y
+	- o functie print care afiseaza pe ecran cele 2 variabile sub forma "(x,y)"
+	- o functie ce primeste o alta clasa Punct ca parametru si calculeaza lungimea liniei determinate de cele 2 puncte
+	
+2. Sa se calculeze in mod recursiv suma tuturor numerelor de la 1 la n
+
+3. Sa se scrie o functie template care primeste 2 parametri: x si y si returneaza minimul dintre cei 2 parametri
+
+- Sa se implementeze o clasa Punct care sa contina:
+    * un constructor care sa primeasca cele doua numere intergi (de tip int) ce reprezinta coordonatele.
+    * metoda changeCoords ce primeste doua numere int si modifica cele doua coordonate ale punctului.
+    * functie de afisare a unui punct astfel: "(x, y)". 
+		
+- Sa se implementeze o clasa Poligon cu urmatoarele:
+	* un constructor care preia ca parametru un singur numar (reprezentand numarul de colturi al poligonului) si aloca spatiu 
+		(un vector) pentru puncte (un punct reprezentand o instanta a clasei Punct).
+	* afisati coordonatele poligonului utilizand metoda de afisare a clasei Punct.
+	* o functie setPoint(punct p, int pos) -- care seteaza punctului de la pozitia pos valoarea p
+	* un destructor care elibereaza memoria stocata
+
+- Sa se creeze o clasa care isi numara instantele la runtime.
+
+- Sa se defineasca o interfata IObject care are o singura metoda pur virtuala: int get_area();
+- Sa se creeze un constructor si un destructor care afiseaza la consola mesaje (s-a creat obiectul, s-a distrus obiectul).
+- Sa se creeze mai multe clase care mostenesc din IObject: Square, Rectangular, Circle si sa se implementeze functia get_area() 
+	specifica care calculeaza aria. Implementati pentru fiecare din aceste clase constructor si destructor care afiseaza mesaje la consola.
+
+Sa se creeze un vector de *IObject cu 3 elemente, fiecare din ele continand un tip de obiect (Square, Rectangular, Circle) si sa 
+	se afiseze aria fiecarui element. Sa se distruga apoi vectorul. Ce observati? 
+
+- Sa se creeze o clasa template care administreaza singura memoria unui obiect primit ca parametru.
+Clasa trebuie ca pe constructor sa primeasca ca parametru un pointer la un obiect alocat dinamic
+iar pe destructor sa faca delete pe obiect. Numim clasa unique_ptr (o vom pune in namespace-ul cj). Aceasta clasa nu trebuie sa permita 
+	copierea (facem disable la copy constructor / copy assignment)
+
+- Sa se creeze o clasa similara cu cea de mai sus care insa permite copierea clasei. Vom mentine un contor (ref count) care se va incrementa 
+	cand se creeaza o clasa noua si se va decrementa cand distrugem o clasa. Vom numi aceasta clasa cj::shared_ptr. Pointer-ul va fi 
+	distrus (se va face delete pe el) atunci cand toate referintele vor fi distruse. 

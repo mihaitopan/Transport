@@ -1,0 +1,27 @@
+Sa se scrie o clasa de serializare a datelor intr-un buffer. Semantura clasei este urmatoarea:
+
+struct ParameterList
+{
+	int Add(int id, int value);
+	int Add(int id, const std::string & value);
+	int Add(int id, const std::vector<unsigned char> & value);
+	int Add(int id, const ParameterList & value);
+
+	int Get(int id, int & value);
+	int Get(int id, std::string & value);
+	int Get(int id, std::vector<unsigned char> & value);
+	int Get(int id, ParameterList & value);
+
+	void SaveToBuffer(std::vector<unsigned char> & buffer);
+	void LoadFromBuffer(const std::vector<unsigned char> & buffer);
+};
+
+ Datele vor fi scrise in buffer in urmatorul format:
+| id<4bytes> | dimensiune<4bytes> | content | id | dimensiune<4bytes> | content | ...
+
+unde id -> reprezinta id-ul (4 bytes) pe care l-ati setat folosind functia Add. Daca id-ul exista deja, se va intoarce o eroare
+dimensiune -> un numar pe 4 bytes ce reprezinta dimensiunea payload-ului
+content -> un buffer cu continutul
+
+metodele SaveToBuffer si LoadFromBuffer vor trebui sa convertesca din si catre reprezentarea interna a ParameterList.
+Faceti implementarea librariei intr-un singur fisier .h si denumiti acest fisier ParameterList.h

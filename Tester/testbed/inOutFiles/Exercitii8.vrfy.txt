@@ -1,0 +1,29 @@
+Sa se scrie o librarie de transport folosind named pipes ce va facilita comunicarea dintre clienti si server.
+Denumiti aceasta librarie Transport.dll si inserati-o in interiorul proiectului scannerAv.
+Interfetele de implementat le veti gasi in cadrul header-ului atasat ITransport.
+
+Sa se scrie o aplicatie in interiorul proiectului scannerAV ce testeaza functionalitatea de transport. 
+Numiti aceasta aplicatie TransportTester.exe. Aplicatia va primi urmatorii parametri de la linia de comanda:
+<nume_pipe> <fisier_de_configurare>
+
+Unde:
+
+<nume_pipe> -- numele pipe-ului pe care se inregistreaza server-ul si care va fi folosit de catre clienti 
+pentru conectare. Pentru simplitate, clientii se vor afla in acelasi proces cu server-ul.
+<fisier_de_configurare> -- numele unui fisier de configurare.
+
+Fisierul de configurare arata astfel:
+fisier_intrare1 fisier_iesire1
+fisier_intrare2 fisier_iesire2
+...
+fisier_intraren fisier_iesiren
+
+Fisier_intrare reprezinta continutul dintr-un fisier de intrare pe care clientul il va citi si il va trimite 
+pe pipe catre server. Server-ul va scrie apoi continutul in fisier_iesire. In aceasta faza a aplicatiei 
+consideram ca tester-ul nu se va opri niciodata (va continua sa ruleze chiar si dupa ce a epuizat de 
+transferat toate fisierele). Scrieti o aplicatie in python care verifica corectitudinea operatiilor facute 
+de libraria de transport.
+
+Folositi aceast plugin in interiorul proiectului scannerAV pentru a face legatura dintre clientul (consola) 
+si server-ul (serviciul de scanare). Atentie! plugin-ul trebuie sa fie folosit in acelasi mod ca celelalte 
+plugin-uri (CreateObject, DestroyObject)

@@ -1,0 +1,3 @@
+Tester\testbed\inOutFiles\LEGENDA.txt Tester\testbed\inOutFiles\LEGENDA.out.txt
+Tester\testbed\inOutFiles\TesterParameterList.txt Tester\testbed\inOutFiles\TesterParameterList.out.txt
+Tester\testbed\inOutFiles\TextScanPlugin.vcxproj.user Tester\testbed\inOutFiles\TextScanPlugin.vcxproj.out.user
