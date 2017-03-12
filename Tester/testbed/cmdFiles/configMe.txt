@@ -1,2 +1,0 @@
-Tester\testbed\inOutFiles\Exercitii8.txt Tester\testbed\inOutFiles\Exercitii8.out.txt
-Tester\testbed\inOutFiles\TesterParameterList.txt Tester\testbed\inOutFiles\TesterParameterList.out.txt

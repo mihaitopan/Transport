@@ -1,2 +1,0 @@
-Tester\testbed\inOutFiles\1.exercitii.txt Tester\testbed\inOutFiles\1.exercitii.out.txt
-Tester\testbed\inOutFiles\2.exercitii.txt Tester\testbed\inOutFiles\2.exercitii.out.txt
